@@ -1,0 +1,19 @@
+{
+ "dashboard": "Dashboard",
+ "farms": "Farms",
+ "crops": "Crops",
+ "seasonPlan": "Season plan",
+ "climate": "Climate",
+ "profile": "Profile",
+ "logout": "Log out",
+ "primary": "Primary",
+ "primaryMobile": "Primary mobile",
+ "compare": "Compare",
+ "rotation": "Rotation",
+ "history": "History",
+ "admin": "Admin",
+ "more": "More",
+ "explorer": "Climate Explorer",
+ "login": "Log in",
+ "register": "Register"
+}

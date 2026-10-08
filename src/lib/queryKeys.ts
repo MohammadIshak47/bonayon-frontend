@@ -1,0 +1,16 @@
+export const queryKeys = {
+  auth: { me: ['auth', 'me'] as const },
+  districts: ['districts'] as const,
+  crops: ['crops'] as const,
+  farms: (page?: number) => (page === undefined ? (['farms'] as const) : (['farms', 'page', page] as const)),
+  farm: (id: string) => ['farms', id] as const,
+  plots: (farmId: string) => ['plots', farmId] as const,
+  climate: (districtId: string) => ['climate', districtId] as const,
+  risk: (districtId: string, season?: string) => ['climate', districtId, 'risk', season ?? ''] as const,
+  anomalies: (districtId: string) => ['climate', districtId, 'anomalies'] as const,
+  recommendations: (filters: object, page: number) => ['recommendations', filters, page] as const,
+  rotationPlans: ['rotation', 'plans'] as const,
+  dashboard: ['dashboard'] as const,
+  profile: ['profile'] as const,
+  admin: (resource: string, filters: object) => ['admin', resource, filters] as const,
+};

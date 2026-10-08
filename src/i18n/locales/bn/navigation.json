@@ -1,0 +1,19 @@
+{
+ "dashboard": "ড্যাশবোর্ড",
+ "farms": "খামার",
+ "crops": "ফসল",
+ "seasonPlan": "মৌসুম পরিকল্পনা",
+ "climate": "জলবায়ু",
+ "profile": "প্রোফাইল",
+ "logout": "লগ আউট",
+ "primary": "প্রধান মেনু",
+ "primaryMobile": "মোবাইল প্রধান মেনু",
+ "compare": "তুলনা",
+ "rotation": "ফসল আবর্তন",
+ "history": "ইতিহাস",
+ "admin": "অ্যাডমিন",
+ "more": "আরও",
+ "explorer": "জলবায়ু অনুসন্ধান",
+ "login": "লগ ইন",
+ "register": "নিবন্ধন"
+}

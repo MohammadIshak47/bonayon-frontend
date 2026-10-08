@@ -1,0 +1,76 @@
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/600.css';
+@import '@fontsource/noto-sans-bengali/400.css';
+@import '@fontsource/noto-sans-bengali/600.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg: 247 248 245;
+    --surface: 255 255 255;
+    --surface-raised: 255 255 255;
+    --border-subtle: 226 230 223;
+    --text: 26 31 26;
+    --text-muted: 90 100 90;
+    --primary: 46 125 50;
+    --on-primary: 255 255 255;
+    --primary-text: 27 94 32;
+    --climate: 2 136 209;
+    --climate-text: 1 87 155;
+    --soil: 121 85 72;
+    --risk-amber: 245 158 11;
+    --risk-amber-text: 146 64 14;
+    --danger: 220 38 38;
+    --danger-text: 185 28 28;
+    --success: 22 163 74;
+    --success-text: 22 101 52;
+    --focus: 27 94 32;
+    --tap-min: 44px;
+  }
+  :root.dark {
+    --bg: 18 23 18;
+    --surface: 28 34 28;
+    --surface-raised: 36 43 36;
+    --border-subtle: 46 54 46;
+    --text: 232 236 230;
+    --text-muted: 163 174 163;
+    --primary: 102 187 106;
+    --on-primary: 11 20 12;
+    --primary-text: 165 214 167;
+    --climate: 79 195 247;
+    --climate-text: 129 212 250;
+    --soil: 188 170 164;
+    --risk-amber: 251 191 36;
+    --risk-amber-text: 252 211 77;
+    --danger: 248 113 113;
+    --danger-text: 252 165 165;
+    --success: 74 222 128;
+    --success-text: 134 239 172;
+    --focus: 165 214 167;
+  }
+  /* Farmer Mode: rem-based sizes scale from 16px to 18px; targets grow to 48px. */
+  html[data-farmer='on'] {
+    font-size: 18px;
+    --tap-min: 56px;
+  }
+  html { -webkit-text-size-adjust: 100%; }
+  /* Farmer Mode: one column everywhere. Apply .stack-grid to responsive grids. */
+  html[data-farmer='on'] .stack-grid { grid-template-columns: minmax(0, 1fr) !important; }
+  body {
+    @apply bg-bg font-sans text-base leading-relaxed text-text antialiased;
+  }
+  :lang(bn) { line-height: 1.7; }
+  :focus-visible {
+    outline: 3px solid rgb(var(--focus));
+    outline-offset: 2px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, ::before, ::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
